@@ -1,6 +1,6 @@
 # qr_app
 
-A new Flutter project.
+Flutter app implementing qr code.
 
 ## Getting Started
 
