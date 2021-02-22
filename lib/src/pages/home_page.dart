@@ -30,15 +30,13 @@ class HomePage extends StatelessWidget {
 class _HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final currentIndex = 1;
+    final currentIndex = 0;
 
     switch (currentIndex) {
       case 0:
         return MapsPage();
-
       case 1:
         return AddressesPage();
-
       default:
         return MapsPage();
     }
