@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:qr_app/widges/custom_navigator_bar.dart';
 import 'package:qr_app/widges/scan_button.dart';
+
+import 'package:qr_app/providers/ui_provider.dart';
+
 import 'package:qr_app/src/pages/maps_page.dart';
 import 'package:qr_app/src/pages/addresses_page.dart';
 
@@ -30,7 +34,9 @@ class HomePage extends StatelessWidget {
 class _HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final currentIndex = 0;
+    final uiProvider = Provider.of<UiProvider>(context);
+
+    final currentIndex = uiProvider.selectedMenuOpt;
 
     switch (currentIndex) {
       case 0:
