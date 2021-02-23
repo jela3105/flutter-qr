@@ -34,3 +34,4 @@ class ScanModel {
         "value": value,
       };
 }
+//app.quicktype.io
