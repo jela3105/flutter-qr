@@ -43,7 +43,7 @@ class _HomePageBody extends StatelessWidget {
     //TODO: read database temporary
 
     final tempScan = ScanModel(value: 'http://google.com');
-    //   DBProvider.db.getAllScans().then(print);
+    DBProvider.db.getAllScans().then(print);
     final scanListProvider =
         Provider.of<ScanListProvider>(context, listen: false);
     switch (currentIndex) {
