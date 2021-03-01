@@ -12,13 +12,13 @@ class ScanButton extends StatelessWidget {
       child: Icon(Icons.filter_center_focus),
       onPressed: () async {
         //String qrcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#3D8BEF', 'Cancel', false, ScanMode.QR);
-        final qrcodeScanRes = 'https://fernando-herrera.com';
+        final qrcodeScanRes = 'http://fernando-herrera.com';
         final scanListProvider =
             Provider.of<ScanListProvider>(context, listen: false);
 
+        print('try to create a scan');
         scanListProvider.newScan(qrcodeScanRes);
-        scanListProvider.newScan('geo:12.12');
-        print('try');
+        //scanListProvider.newScan('geo:12.12');
       },
     );
   }

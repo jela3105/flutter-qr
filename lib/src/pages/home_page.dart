@@ -37,22 +37,17 @@ class _HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final uiProvider = Provider.of<UiProvider>(context);
-
     final currentIndex = uiProvider.selectedMenuOpt;
 
-    //TODO: read database temporary
-
-    final tempScan = ScanModel(value: 'http://google.com');
-    DBProvider.db.getAllScans().then(print);
     final scanListProvider =
         Provider.of<ScanListProvider>(context, listen: false);
     switch (currentIndex) {
       case 0:
-        scanListProvider.loadScansByType('geo');
-        return MapsPage();
-      case 1:
         scanListProvider.loadScansByType('http');
         return AddressesPage();
+      case 1:
+        scanListProvider.loadScansByType('geo');
+        return MapsPage();
       default:
         return MapsPage();
     }
