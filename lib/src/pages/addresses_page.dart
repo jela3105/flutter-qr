@@ -13,7 +13,8 @@ class AddressesPage extends StatelessWidget {
     return ListView.builder(
       itemCount: scans.length,
       itemBuilder: (_, i) => ListTile(
-        leading: Icon(Icons.map, color: Theme.of(context).primaryColor),
+        leading:
+            Icon(Icons.home_outlined, color: Theme.of(context).primaryColor),
         title: Text(scans[i].value),
         subtitle: Text(scans[i].id.toString()),
         trailing: Icon(Icons.keyboard_arrow_right, color: Colors.grey),

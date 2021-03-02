@@ -16,7 +16,7 @@ class MapsPage extends StatelessWidget {
         title: Text(scans[i].value),
         subtitle: Text(scans[i].id.toString()),
         trailing: Icon(Icons.keyboard_arrow_right, color: Colors.grey),
-        onTap: () => print('open someting...'),
+        onTap: () => print(scans[i].id),
       ),
     );
   }
