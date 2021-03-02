@@ -43,10 +43,10 @@ class _HomePageBody extends StatelessWidget {
         Provider.of<ScanListProvider>(context, listen: false);
     switch (currentIndex) {
       case 0:
-        scanListProvider.loadScans();
+        scanListProvider.loadScansByType('geo');
         return MapsPage();
       case 1:
-        scanListProvider.loadScans();
+        scanListProvider.loadScansByType('http');
         return AddressesPage();
       default:
         return MapsPage();
