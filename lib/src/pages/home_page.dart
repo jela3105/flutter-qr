@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:qr_app/providers/ui_provider.dart';
-import 'package:qr_app/providers/db_provider.dart';
 import 'package:qr_app/providers/scan_list_provider.dart';
 
 import 'package:qr_app/widges/custom_navigator_bar.dart';
@@ -38,9 +37,9 @@ class _HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final uiProvider = Provider.of<UiProvider>(context);
     final currentIndex = uiProvider.selectedMenuOpt;
-
     final scanListProvider =
         Provider.of<ScanListProvider>(context, listen: false);
+
     switch (currentIndex) {
       case 0:
         scanListProvider.loadScansByType('geo');

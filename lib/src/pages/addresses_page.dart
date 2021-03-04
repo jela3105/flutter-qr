@@ -8,7 +8,6 @@ class AddressesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final scanListProvider = Provider.of<ScanListProvider>(context);
     final scans = scanListProvider.scans;
-    print(scans.length);
 
     return ListView.builder(
       itemCount: scans.length,
