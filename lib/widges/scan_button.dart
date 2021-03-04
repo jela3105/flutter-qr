@@ -18,6 +18,7 @@ class ScanButton extends StatelessWidget {
 
         print('try to create a scan');
         scanListProvider.newScan(qrcodeScanRes);
+        scanListProvider.newScan('geo:31.212,321.21');
         //scanListProvider.newScan('geo:12.12');
       },
     );
