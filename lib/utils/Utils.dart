@@ -7,6 +7,6 @@ launchURL(BuildContext context, ScanModel scan) async {
   if (scan.type == 'http') {
     await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
   } else {
-    print('geo location');
+    Navigator.pushNamed(context, 'map', arguments: scan);
   }
 }
