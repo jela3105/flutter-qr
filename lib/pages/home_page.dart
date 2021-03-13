@@ -7,8 +7,8 @@ import 'package:qr_app/providers/scan_list_provider.dart';
 import 'package:qr_app/widges/custom_navigator_bar.dart';
 import 'package:qr_app/widges/scan_button.dart';
 
-import 'package:qr_app/src/pages/maps_page.dart';
-import 'package:qr_app/src/pages/addresses_page.dart';
+import 'package:qr_app/pages/maps_page.dart';
+import 'package:qr_app/pages/addresses_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
