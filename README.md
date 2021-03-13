@@ -18,4 +18,4 @@ samples, guidance on mobile development, and a full API reference.
 ## Quick start
 1. Clone the repo with `git clone`
 2. Open the directory in the command line or the bash
-3. Run the command `flutter run --no-sound-null-safety` 
+3. Run the command `flutter run` 
