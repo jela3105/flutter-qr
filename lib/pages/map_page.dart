@@ -16,6 +16,13 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     final ScanModel scan = ModalRoute.of(context).settings.arguments;
+    Set<Marker> markers = new Set<Marker>();
+    markers.add(
+      Marker(
+        markerId: MarkerId('geo-location'),
+        position: scan.getLatLng(),
+      ),
+    );
 
     final CameraPosition initialPoint = CameraPosition(
       target: scan.getLatLng(),
@@ -29,6 +36,7 @@ class _MapPageState extends State<MapPage> {
       ),
       body: GoogleMap(
         mapType: MapType.normal,
+        markers: markers,
         initialCameraPosition: initialPoint,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
